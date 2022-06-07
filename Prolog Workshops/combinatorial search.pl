@@ -1,0 +1,11 @@
+solve([L,I,V,E]):-select(E,[0,1,2,3,4,5,6,7,8,9],R1),
+    E\==0,
+    L is (2*E) mod 10,L\==0,C1 is (2*E)//10,
+    select(L,R1,R2),
+    select(V,R2,R3),V\==0,
+    I is (C1+V+L) mod 10, select(I,R3,R4),
+    C2 is (C1+V+L)//10,
+    V is (2*I+C2) mod 10,
+    C3 is (2*I+C2)//10,
+    E is (L+V+C3) mod 10,
+    0 is (L+V+C3)//10.
