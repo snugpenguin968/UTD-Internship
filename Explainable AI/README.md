@@ -1,0 +1,1 @@
+This took up the bulk of the internship. My main job was to test Kaggle or UCI ML datasets on the FOLD-R++ (binary classification) and FOLD-RM (multiclass classification) algorithms. I also decided to create my own full data science pipeline for each dataset to see how my custom models stack up in differnt situations. 
