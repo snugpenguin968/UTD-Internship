@@ -1,0 +1,38 @@
+% stroke dataset 5110 11
+stroke(X,'0') :- age(X,N2), N2=<56.0, not ab1(X), not ab2(X), not ab3(X), not ab4(X), not ab5(X), not ab6(X), not ab7(X), not ab8(X), not ab9(X), not ab10(X), not ab11(X), not ab12(X), not ab13(X), not ab14(X), not ab15(X), not ab16(X). 
+stroke(X,'0') :- age(X,N2), N2>56.0, not ab17(X), not ab19(X), not ab24(X), not ab30(X), not ab31(X), not ab33(X). 
+ab1(X) :- id(X,'32399'), age(X,N2), N2>37.0. 
+ab2(X) :- id(X,'42072'), age(X,N2), N2>37.0. 
+ab3(X) :- id(X,'62439'), age(X,N2), N2>37.0. 
+ab4(X) :- id(X,'13861'), age(X,N2), N2>37.0. 
+ab5(X) :- id(X,'12062'), age(X,N2), N2>37.0. 
+ab6(X) :- id(X,'1836'), age(X,N2), N2>37.0. 
+ab7(X) :- id(X,'41069'), age(X,N2), N2>37.0. 
+ab8(X) :- id(X,'56939'), age(X,N2), N2>37.0. 
+ab9(X) :- id(X,'31563'), age(X,N2), N2>37.0. 
+ab10(X) :- id(X,'63453'), age(X,N2), N2>37.0. 
+ab11(X) :- id(X,'19773'), age(X,N2), N2>37.0. 
+ab12(X) :- id(X,'45805'), age(X,N2), N2>37.0. 
+ab13(X) :- id(X,'62602'), age(X,N2), N2>37.0. 
+ab14(X) :- id(X,'8899'), age(X,N2), N2>37.0. 
+ab15(X) :- id(X,'12175'), age(X,N2), N2>37.0. 
+ab16(X) :- id(X,'66866'), age(X,N2), N2>37.0. 
+ab17(X) :- avg_glucose_lvl(X,'n/a'), not ever_married(X,'yes'). 
+ab18(X) :- id(X,'1741'). 
+ab19(X) :- avg_glucose_lvl(X,'n/a'), not heart_disease(X,'1'), gender(X,'male'), age(X,N2), N2>73.0, not ab18(X). 
+ab20(X) :- not gender(X,'male'), id(X,'68721'). 
+ab21(X) :- id(X,'5987'). 
+ab22(X) :- id(X,'60126'). 
+ab23(X) :- id(X,'8983'). 
+ab24(X) :- age(X,N2), N2>75.0, N2=<80.0, avg_glucose_lvl(X,N8), N8>23.8, N8=<24.2, not ab20(X), not ab21(X), not ab22(X), not ab23(X). 
+ab25(X) :- id(X,'739'). 
+ab26(X) :- not bmi(X,'formerly_smoked'), id(X,'6472'). 
+ab27(X) :- id(X,'22865'). 
+ab28(X) :- id(X,'37327'). 
+ab29(X) :- id(X,'132'). 
+ab30(X) :- avg_glucose_lvl(X,'n/a'), not hypertension(X,'1'), not heart_disease(X,'1'), not gender(X,'male'), not ab25(X), not ab26(X), not ab27(X), not ab28(X), not ab29(X). 
+ab31(X) :- id(X,'56546'), age(X,N2), N2>77.0, avg_glucose_lvl(X,N8), N8=<23.6. 
+ab32(X) :- bmi(X,'unknown'). 
+ab33(X) :- work_type(X,'private'), age(X,N2), N2>67.0, avg_glucose_lvl(X,N8), N8>44.7, not ab32(X). 
+% acc 0.9442 p 0.9553 r 0.9877 f1 0.9712
+% foldr++ costs:  0:00:00.604080 
