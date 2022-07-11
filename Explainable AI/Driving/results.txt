@@ -1,0 +1,8 @@
+% driving train dataset (3644, 8) test (3084, 8)
+class(X,'slow') :- timestamp(X,N6), N6>3582966.0. 
+class(X,'normal') :- timestamp(X,N6), N6=<3582276.0. 
+class(X,'aggressive') :- accx(X,N0), N0>-4.133. 
+class(X,'aggressive') :- accx(X,N0), N0=<-4.133. 
+% acc 0.3233 # rules 4
+% acc 0.3233 macro p r f1 0.1045 0.3233 0.158 # rules 4
+% foldrm costs:  0:00:00.108109 
