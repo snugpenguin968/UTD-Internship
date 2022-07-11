@@ -1,0 +1,42 @@
+% nasa dataset 90836 10
+hazardous(X,'false') :- est_diameter_max(X,N3), N3=<0.23, not ab1(X), not ab2(X), not ab3(X), not ab4(X), not ab5(X), not ab6(X), not ab7(X), not ab8(X), not ab9(X), not ab10(X), not ab11(X), not ab12(X), not ab13(X), not ab14(X). 
+hazardous(X,'false') :- miss_distance(X,N5), N5>11955090.1, not ab17(X), not ab18(X), not ab19(X). 
+hazardous(X,'false') :- miss_distance(X,N5), N5>11809073.707, N5=<11833856.48. 
+hazardous(X,'false') :- est_diameter_min(X,'0.2538370294'), miss_distance(X,N5), N5>11363601.739, N5=<11799667.816. 
+hazardous(X,'false') :- relative_velocity(X,N4), N4=<21301.643, miss_distance(X,N5), N5>7669334.698, N5=<11799667.816, not ab20(X), not ab21(X). 
+hazardous(X,'false') :- miss_distance(X,N5), N5>10684536.286, N5=<10704195.96. 
+hazardous(X,'false') :- not est_diameter_min(X,'0.1160259082'), not est_diameter_min(X,'0.152249185'), est_diameter_max(X,N3), N3=<0.537, relative_velocity(X,N4), N4>24922.423, N4=<46087.043, miss_distance(X,N5), N5>10862199.42, N5=<11799667.816, not ab24(X), not ab25(X), not ab26(X), not ab27(X). 
+hazardous(X,'false') :- id(X,'3485632'), est_diameter_max(X,N3), N3=<0.247, miss_distance(X,N5), N5>7669334.698, N5=<11786881.552. 
+hazardous(X,'false') :- est_diameter_max(X,N3), N3>0.242, N3=<0.247, miss_distance(X,N5), N5>7596993.552, N5=<11786881.552. 
+hazardous(X,'false') :- miss_distance(X,N5), N5>7669334.698, N5=<7705284.951, not ab28(X). 
+ab1(X) :- id(X,'3063058'), est_diameter_max(X,N3), N3>0.215. 
+ab2(X) :- id(X,'3102694'), est_diameter_max(X,N3), N3>0.22. 
+ab3(X) :- id(X,'3102683'), est_diameter_max(X,N3), N3>0.224. 
+ab4(X) :- id(X,'3025766'), est_diameter_max(X,N3), N3>0.224. 
+ab5(X) :- id(X,'3713283'), est_diameter_max(X,N3), N3>0.224. 
+ab6(X) :- id(X,'3774614'), est_diameter_max(X,N3), N3>0.196. 
+ab7(X) :- id(X,'3153516'), est_diameter_max(X,N3), N3>0.196. 
+ab8(X) :- id(X,'3144150'), est_diameter_max(X,N3), N3>0.224. 
+ab9(X) :- id(X,'3647695'), est_diameter_max(X,N3), N3>0.224. 
+ab10(X) :- id(X,'3789609'), est_diameter_max(X,N3), N3>0.196. 
+ab11(X) :- id(X,'3672561'). 
+ab12(X) :- id(X,'3180153'). 
+ab13(X) :- id(X,'3699903'). 
+ab14(X) :- id(X,'3723767'). 
+ab15(X) :- id(X,'2089136'). 
+ab16(X) :- miss_distance(X,N5), N5>38672148.356, not ab15(X). 
+ab17(X) :- est_diameter_min(X,'0.2424124811'), relative_velocity(X,N4), N4>13165.87, N4=<17573.624, not ab16(X). 
+ab18(X) :- est_diameter_max(X,N3), N3=<0.312, relative_velocity(X,N4), N4>13804.78, N4=<16960.673, miss_distance(X,N5), N5>52584377.139, N5=<57180172.465. 
+ab19(X) :- est_diameter_min(X,'0.1289896833'), relative_velocity(X,N4), N4>14609.08, N4=<17573.624. 
+ab20(X) :- id(X,'2162173'). 
+ab21(X) :- id(X,'3726791'). 
+ab22(X) :- relative_velocity(X,N4), N4>36625.148, N4=<41630.849. 
+ab23(X) :- id(X,'54247992'). 
+ab24(X) :- est_diameter_max(X,N3), N3>0.284, relative_velocity(X,N4), N4>25829.745, miss_distance(X,N5), N5=<11338038.664, not ab22(X), not ab23(X). 
+ab25(X) :- id(X,'54186213'), miss_distance(X,N5), N5>11577856.84. 
+ab26(X) :- id(X,'2444004'). 
+ab27(X) :- id(X,'54095182'). 
+ab28(X) :- id(X,'3663745'). 
+% acc 0.9113 p 0.9131 r 0.9965 f1 0.953
+% foldr++ costs:  0:00:13.353943 
+
