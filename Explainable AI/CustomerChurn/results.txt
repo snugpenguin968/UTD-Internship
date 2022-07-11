@@ -1,0 +1,22 @@
+% churn dataset 10000 14
+exited(X,'0') :- age(X,N6), N6=<42.0, not ab8(X), not ab9(X). 
+exited(X,'0') :- not isactivemember(X,'0'), age(X,N6), N6>42.0, not ab12(X). 
+exited(X,'0') :- isactivemember(X,'0'), age(X,N6), N6>42.0, N6=<50.0, numofproducts(X,N9), N9>1.0, not ab13(X), not ab15(X). 
+ab1(X) :- rownumber(X,'9555'). 
+ab2(X) :- age(X,N6), N6=<32.0, balance(X,N8), N8=<49508.79, estimatedsalary(X,N12), N12=<151256.22, not ab1(X). 
+ab3(X) :- creditscore(X,N3), N3=<597.0, estimatedsalary(X,N12), N12>65039.9. 
+ab4(X) :- tenure(X,N7), N7>5.0, estimatedsalary(X,N12), N12>120321.09. 
+ab5(X) :- rownumber(X,'6166'). 
+ab6(X) :- tenure(X,N7), N7>2.0, balance(X,N8), N8=<49508.79, estimatedsalary(X,N12), N12>7312.25, N12=<151256.22, not ab3(X), not ab4(X), not ab1(X), not ab5(X). 
+ab7(X) :- geography(X,'germany'), tenure(X,N7), N7=<7.0, estimatedsalary(X,N12), N12>185599.34. 
+ab8(X) :- numofproducts(X,N9), N9>2.0, not ab2(X), not ab6(X), not ab7(X). 
+ab9(X) :- geography(X,'germany'), rownumber(X,'6476'), age(X,N6), N6>33.0, balance(X,N8), N8=<90248.79, numofproducts(X,N9), N9=<1.0. 
+ab10(X) :- rownumber(X,'5236'). 
+ab11(X) :- age(X,N6), N6>64.0, not ab10(X). 
+ab12(X) :- numofproducts(X,N9), N9>2.0, not ab11(X). 
+ab13(X) :- numofproducts(X,N9), N9>2.0. 
+ab14(X) :- rownumber(X,'3913'). 
+ab15(X) :- creditscore(X,N3), N3>516.0, N3=<595.0, age(X,N6), N6>44.0, balance(X,N8), N8>49157.09, not ab14(X). 
+% acc 0.8545 p 0.8669 r 0.9662 f1 0.9139
+% foldr++ costs:  0:00:00.759693 
+
