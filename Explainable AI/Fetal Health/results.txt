@@ -1,0 +1,53 @@
+% fetal health dataset (2126, 22)
+fetal_health(X,'1.0') :- abnormal_short_term_variability(X,N7), N7=<58.0, not ab1(X), not ab2(X), not ab3(X), not ab4(X), not ab6(X), not ab7(X), not ab8(X). 
+fetal_health(X,'1.0') :- percentage_of_time_with_abnormal_long_term_variability(X,N9), N9=<6.0, histogram_mean(X,N17), N17>107.0, not ab12(X), not ab14(X), not ab16(X), not ab17(X), not ab18(X), not ab19(X). 
+fetal_health(X,'2.0') :- histogram_mode(X,N16), N16>139.0, not ab20(X), not ab21(X), not ab22(X). 
+fetal_health(X,'3.0') :- histogram_mean(X,N17), N17=<108.0, not ab23(X), not ab24(X). 
+fetal_health(X,'3.0') :- percentage_of_time_with_abnormal_long_term_variability(X,N9), N9>68.0, not ab25(X). 
+fetal_health(X,'1.0') :- uterine_contractions(X,N3), N3>0.003, not ab26(X), not ab28(X), not ab29(X). 
+fetal_health(X,'2.0') :- histogram_mode(X,N16), N16=<138.0, not ab21(X), not ab31(X), not ab34(X), not ab35(X), not ab36(X). 
+fetal_health(X,'3.0') :- abnormal_short_term_variability(X,N7), N7>77.0. 
+fetal_health(X,'1.0') :- percentage_of_time_with_abnormal_long_term_variability(X,N9), N9>4.0, not ab37(X). 
+fetal_health(X,'3.0') :- baseline_value(X,N0), N0>123.0. 
+fetal_health(X,'3.0') :- baseline_value(X,N0), N0=<123.0. 
+ab1(X) :- accelerations(X,N1), N1=<0.002, histogram_max(X,N13), N13>160.0, histogram_variance(X,N19), N19>101.0. 
+ab2(X) :- accelerations(X,N1), N1=<0.002, abnormal_short_term_variability(X,N7), N7>35.0, percentage_of_time_with_abnormal_long_term_variability(X,N9), N9=<21.0, histogram_median(X,N18), N18>150.0, histogram_variance(X,N19), N19>2.0. 
+ab3(X) :- accelerations(X,N1), N1=<0.0, prolongued_decelerations(X,N6), N6>0.0, histogram_mode(X,N16), N16=<117.0. 
+ab4(X) :- percentage_of_time_with_abnormal_long_term_variability(X,N9), N9>60.0. 
+ab5(X) :- mean_value_of_long_term_variability(X,N10), N10=<4.3. 
+ab6(X) :- baseline_value(X,N0), N0=<148.0, accelerations(X,N1), N1=<0.0, histogram_min(X,N12), N12>134.0, histogram_max(X,N13), N13>164.0, not ab5(X). 
+ab7(X) :- baseline_value(X,N0), N0>132.0, prolongued_decelerations(X,N6), N6>0.001. 
+ab8(X) :- percentage_of_time_with_abnormal_long_term_variability(X,N9), N9>10.0, histogram_number_of_peaks(X,N14), N14>11.0. 
+ab9(X) :- baseline_value(X,N0), N0>151.0, uterine_contractions(X,N3), N3>0.004, abnormal_short_term_variability(X,N7), N7>36.0. 
+ab10(X) :- baseline_value(X,N0), N0>144.0, mean_value_of_short_term_variability(X,N8), N8>0.7, histogram_width(X,N11), N11=<42.0. 
+ab11(X) :- mean_value_of_short_term_variability(X,N8), N8>0.7, histogram_width(X,N11), N11=<30.0. 
+ab12(X) :- abnormal_short_term_variability(X,N7), N7=<58.0, not ab9(X), not ab10(X), not ab11(X). 
+ab13(X) :- accelerations(X,N1), N1>0.0. 
+ab14(X) :- abnormal_short_term_variability(X,N7), N7>73.0, not ab13(X). 
+ab15(X) :- light_decelerations(X,N4), N4>0.006. 
+ab16(X) :- prolongued_decelerations(X,N6), N6>0.001, not ab15(X). 
+ab17(X) :- abnormal_short_term_variability(X,N7), N7=<63.0, percentage_of_time_with_abnormal_long_term_variability(X,N9), N9>3.0, histogram_variance(X,N19), N19=<4.0. 
+ab18(X) :- baseline_value(X,N0), N0>106.0, histogram_width(X,N11), N11=<20.0. 
+ab19(X) :- baseline_value(X,N0), N0>148.0, N0=<154.0. 
+ab20(X) :- percentage_of_time_with_abnormal_long_term_variability(X,N9), N9>68.0. 
+ab21(X) :- abnormal_short_term_variability(X,N7), N7>79.0. 
+ab22(X) :- baseline_value(X,N0), N0>151.0, percentage_of_time_with_abnormal_long_term_variability(X,N9), N9>32.0, N9=<50.0. 
+ab23(X) :- histogram_max(X,N13), N13>230.0. 
+ab24(X) :- abnormal_short_term_variability(X,N7), N7=<24.0. 
+ab25(X) :- uterine_contractions(X,N3), N3>0.004. 
+ab26(X) :- prolongued_decelerations(X,N6), N6>0.0. 
+ab27(X) :- uterine_contractions(X,N3), N3>0.006. 
+ab28(X) :- fetal_movement(X,N2), N2>0.001, mean_value_of_long_term_variability(X,N10), N10>3.2, not ab27(X). 
+ab29(X) :- percentage_of_time_with_abnormal_long_term_variability(X,N9), N9>33.0, mean_value_of_long_term_variability(X,N10), N10>6.1. 
+ab30(X) :- percentage_of_time_with_abnormal_long_term_variability(X,N9), N9>16.0. 
+ab31(X) :- abnormal_short_term_variability(X,N7), N7>34.0, mean_value_of_short_term_variability(X,N8), N8>0.7, not ab30(X). 
+ab32(X) :- abnormal_short_term_variability(X,N7), N7>69.0. 
+ab33(X) :- uterine_contractions(X,N3), N3=<0.001, not ab32(X). 
+ab34(X) :- mean_value_of_long_term_variability(X,N10), N10>6.7, histogram_mean(X,N17), N17=<122.0, not ab33(X). 
+ab35(X) :- abnormal_short_term_variability(X,N7), N7=<59.0, histogram_min(X,N12), N12>122.0. 
+ab36(X) :- abnormal_short_term_variability(X,N7), N7>78.0, percentage_of_time_with_abnormal_long_term_variability(X,N9), N9=<41.0. 
+ab37(X) :- histogram_number_of_peaks(X,N14), N14=<0.0. 
+% acc 0.9202 # rules 48
+% acc 0.9202 macro p r f1 0.9209 0.9202 0.9205 # rules 48
+% foldrm costs:  0:00:00.271676 
+
