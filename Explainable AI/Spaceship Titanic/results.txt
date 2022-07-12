@@ -1,0 +1,31 @@
+% spaceship train dataset 8693 14
+% spaceship test dataset 4277 13
+ :- not cryosleep(X,'true'), roomservice(X,N7), N7>345.0, not ab5(X), not ab6(X), not ab8(X), not ab9(X), not ab10(X), not ab11(X). 
+ :- not cryosleep(X,'true'), spa(X,N10), N10>422.0, not ab16(X). 
+ :- vrdeck(X,N11), N11>168.0, not ab22(X), not ab23(X), not ab24(X). 
+ab1(X) :- passengerid(X,'8853_01'). 
+ab2(X) :- shoppingmall(X,N9), N9>0.0, not ab1(X). 
+ab3(X) :- age(X,N5), N5=<29.0, vrdeck(X,N11), N11>273.0, not ab2(X). 
+ab4(X) :- passengerid(X,'1261_01'). 
+ab5(X) :- roomservice(X,N7), N7=<3551.0, foodcourt(X,N8), N8>1627.0, spa(X,N10), N10=<203.0, not ab3(X), not ab4(X). 
+ab6(X) :- shoppingmall(X,N9), N9>4940.0. 
+ab7(X) :- passengerid(X,'7620_01'). 
+ab8(X) :- roomservice(X,N7), N7>2001.0, N7=<3992.0, shoppingmall(X,N9), N9>1296.0, vrdeck(X,N11), N11=<0.0, not ab7(X). 
+ab9(X) :- passengerid(X,'1182_02'), roomservice(X,N7), N7>2627.0. 
+ab10(X) :- passengerid(X,'1767_02'), roomservice(X,N7), N7>2627.0. 
+ab11(X) :- passengerid(X,'5960_02'), roomservice(X,N7), N7>2627.0. 
+ab12(X) :- shoppingmall(X,N9), N9=<45.0, spa(X,N10), N10>1366.0, N10=<1643.0, vrdeck(X,N11), N11>27.0. 
+ab13(X) :- passengerid(X,'7937_01'). 
+ab14(X) :- passengerid(X,'0439_01'). 
+ab15(X) :- passengerid(X,'8431_02'). 
+ab16(X) :- foodcourt(X,N8), N8>3862.0, spa(X,N10), N10=<2868.0, vrdeck(X,N11), N11=<605.0, not ab12(X), not ab13(X), not ab14(X), not ab15(X). 
+ab17(X) :- foodcourt(X,N8), N8>12563.0. 
+ab18(X) :- passengerid(X,'0428_01'). 
+ab19(X) :- passengerid(X,'3353_05'). 
+ab20(X) :- passengerid(X,'1897_01'). 
+ab21(X) :- vrdeck(X,N11), N11>2453.0, not ab17(X), not ab18(X), not ab19(X), not ab20(X). 
+ab22(X) :- foodcourt(X,N8), N8>2864.0, not ab21(X). 
+ab23(X) :- spa(X,N10), N10>417.0. 
+ab24(X) :- roomservice(X,N7), N7>345.0. 
+
+**Score: 0.21744**
