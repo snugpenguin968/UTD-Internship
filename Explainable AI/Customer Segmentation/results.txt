@@ -1,0 +1,39 @@
+% fetal health dataset (8068, 11)
+segmentation(X,'d') :- age(X,N3), N3=<23.0, not ab1(X), not ab8(X). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), gender(X,'female'), not graduated(X,'no'), age(X,N3), N3>35.0, work_experience(X,N6), N6>1.0, N6=<4.0. 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), not var_1(X,'cat_6'), id(X,'459561'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), id(X,'459068'), age(X,N3), N3=<37.0, work_experience(X,N6), N6=<3.0, family_size(X,N8), N8>1.0, N8=<2.0. 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), not var_1(X,'cat_6'), id(X,'460115'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), id(X,'459213'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), not var_1(X,'cat_6'), id(X,'460130'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), id(X,'459255'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), not var_1(X,'cat_6'), id(X,'460163'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), id(X,'459267'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), id(X,'459469'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), not var_1(X,'cat_6'), id(X,'460228'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), id(X,'460586'), work_experience(X,N6), N6=<3.0, family_size(X,N8), N8>1.0, N8=<2.0. 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), id(X,'459493'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), gender(X,'female'), id(X,'459971'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), id(X,'459863'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), not var_1(X,'cat_6'), id(X,'460770'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), id(X,'460753'). 
+segmentation(X,'a') :- spending_score(X,'low'), profession(X,'healthcare'), not var_1(X,'cat_6'), id(X,'460780'). 
+segmentation(X,'c') :- not spending_score(X,'low'), profession(X,'artist'), age(X,N3), N3>45.0, not ab12(X), not ab13(X), not ab14(X), not ab15(X). 
+ab1(X) :- not profession(X,'healthcare'), not profession(X,null), family_size(X,N8), N8>6.0. 
+ab2(X) :- id(X,'460194'). 
+ab3(X) :- id(X,'461034'). 
+ab4(X) :- id(X,'462842'). 
+ab5(X) :- id(X,'463888'). 
+ab6(X) :- id(X,'466564'). 
+ab7(X) :- id(X,'467892'). 
+ab8(X) :- not profession(X,'healthcare'), not profession(X,null), not var_1(X,'cat_4'), not profession(X,'executive'), not spending_score(X,'average'), not profession(X,'homemaker'), not id(X,'459037'), age(X,N3), N3>22.0, not ab2(X), not ab3(X), not ab4(X), not ab5(X), not ab6(X), not ab7(X). 
+ab9(X) :- id(X,'464507'). 
+ab10(X) :- id(X,'465100'). 
+ab11(X) :- id(X,'466637'). 
+ab12(X) :- not gender(X,'female'), not spending_score(X,'average'), age(X,N3), N3=<60.0, not ab9(X), not ab10(X), not ab11(X). 
+ab13(X) :- not gender(X,'female'), id(X,'459989'), work_experience(X,N6), N6>5.0. 
+ab14(X) :- var_1(X,'cat_4'), work_experience(X,N6), N6>2.0. 
+ab15(X) :- not gender(X,'female'), id(X,'467545'), work_experience(X,N6), N6>5.0. 
+% acc 0.1413 # rules 35
+% acc 0.1413 macro p r f1 0.4212 0.1413 0.2116 # rules 35
+% foldrm costs:  0:00:01.354027 
