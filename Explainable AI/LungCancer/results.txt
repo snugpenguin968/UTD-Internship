@@ -1,0 +1,10 @@
+% lung dataset 309 14
+lung_cancer(X,'yes') :- not allergy(X,'1'). 
+lung_cancer(X,'yes') :- not yellow_fingers(X,'1'), not ab2(X), not ab3(X), not lung_cancer(X,'yes'), not ab4(X). 
+lung_cancer(X,'yes') :- yellow_fingers(X,'1'), allergy(X,'1'), not chronic_disease(X,'1'), not shortness_of_breath(X,'1'). 
+ab1(X) :- age(X,N1), N1=<49.0. 
+ab2(X) :- peer_pressure(X,'1'), chronic_disease(X,'1'), shortness_of_breath(X,'1'), not ab1(X). 
+ab3(X) :- alcohol_consuming(X,'1'), anxiety(X,'1'). 
+ab4(X) :- gender(X,'m'), age(X,N1), N1=<46.0. 
+% acc 0.9194 p 0.9623 r 0.9444 f1 0.9533
+% foldr++ costs:  0:00:00.007178 
