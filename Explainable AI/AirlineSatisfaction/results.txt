@@ -1,0 +1,104 @@
+% airline train dataset (103904, 23) test (25976, 23)
+satisfaction(X,'neutral_or_dissatisfied') :- not class(X,'business'), not ab7(X), not ab8(X), not ab10(X), not ab12(X), not ab13(X), not ab14(X), not ab19(X), not ab23(X), not ab24(X). 
+satisfaction(X,'satisfied') :- food_and_drink(X,'5'), not ab36(X), not ab45(X), not ab46(X), not ab47(X), not ab48(X), not ab49(X), not ab50(X), not ab51(X), not ab52(X). 
+satisfaction(X,'satisfied') :- food_and_drink(X,'4'), not ab73(X), not ab76(X). 
+satisfaction(X,'neutral_or_dissatisfied') :- not inflight_wifi_service(X,'0'), not ab91(X), not ab92(X). 
+satisfaction(X,'satisfied') :- not id(X,'1000'). 
+satisfaction(X,'satisfied') :- id(X,'1000'). 
+ab1(X) :- baggage_handling(X,'5'). 
+ab2(X) :- flight_distance(X,N6), N6>1189.0, departure_delay_in_minutes(X,N21), N21=<9.0. 
+ab3(X) :- id(X,'38407'), flight_distance(X,N6), N6=<391.0. 
+ab4(X) :- id(X,'45852'). 
+ab5(X) :- id(X,'49263'). 
+ab6(X) :- food_and_drink(X,'4'), leg_room_service(X,'3'), not on-board_service(X,'5'), inflight_service(X,N19), N19>4.0, not ab1(X), not ab2(X), not ab3(X), not ab4(X), not ab5(X). 
+ab7(X) :- inflight_wifi_service(X,'5'), not ab6(X). 
+ab8(X) :- inflight_wifi_service(X,'4'), type_of_travel(X,'business_travel'), customer_type(X,'loyal_customer'). 
+ab9(X) :- seat_comfort(X,'0'). 
+ab10(X) :- inflight_wifi_service(X,'0'), not ab9(X). 
+ab11(X) :- id(X,'89577'). 
+ab12(X) :- inflight_wifi_service(X,'4'), not customer_type(X,'loyal_customer'), leg_room_service(X,'5'), flight_distance(X,N6), N6>1036.0, departure_delay_in_minutes(X,N21), N21>5.0, not ab11(X). 
+ab13(X) :- inflight_wifi_service(X,'4'), not customer_type(X,'loyal_customer'), leg_room_service(X,'5'), age(X,N3), N3>43.0, departure_delay_in_minutes(X,N21), N21>5.0. 
+ab14(X) :- inflight_wifi_service(X,'4'), not customer_type(X,'loyal_customer'), checkin_service(X,'5'), departure/arrival_time_convenient(X,'1'), departure_delay_in_minutes(X,N21), N21>5.0. 
+ab15(X) :- flight_distance(X,N6), N6>895.0, cleanliness(X,N20), N20=<6.0. 
+ab16(X) :- age(X,N3), N3=<18.0, cleanliness(X,N20), N20>25.0. 
+ab17(X) :- id(X,'16541'). 
+ab18(X) :- online_boarding(X,'1'), cleanliness(X,N20), N20>19.0, not ab17(X). 
+ab19(X) :- inflight_wifi_service(X,'4'), not customer_type(X,'loyal_customer'), not leg_room_service(X,'3'), not leg_room_service(X,'4'), age(X,N3), N3=<24.0, flight_distance(X,N6), N6>809.0, departure_delay_in_minutes(X,N21), N21>5.0, not ab15(X), not ab16(X), not ab18(X). 
+ab20(X) :- flight_distance(X,N6), N6>541.0, inflight_service(X,N19), N19>3.0. 
+ab21(X) :- online_boarding(X,'4'), age(X,N3), N3=<20.0. 
+ab22(X) :- inflight_entertainment(X,'4'), departure_delay_in_minutes(X,N21), N21>9.0, not ab20(X), not ab21(X). 
+ab23(X) :- inflight_wifi_service(X,'4'), departure/arrival_time_convenient(X,'0'), not food_and_drink(X,'5'), not customer_type(X,'loyal_customer'), age(X,N3), N3=<24.0, departure_delay_in_minutes(X,N21), N21>5.0, not ab22(X). 
+ab24(X) :- inflight_wifi_service(X,'4'), not class(X,'eco'), type_of_travel(X,'business_travel'), id(X,'29729'), departure_delay_in_minutes(X,N21), N21>5.0. 
+ab25(X) :- inflight_wifi_service(X,'5'). 
+ab26(X) :- inflight_wifi_service(X,'4'), departure_delay_in_minutes(X,N21), N21>2.0, N21=<5.0. 
+ab27(X) :- inflight_wifi_service(X,'0'). 
+ab28(X) :- inflight_wifi_service(X,'4'), baggage_handling(X,'2'), departure_delay_in_minutes(X,N21), N21=<1.0. 
+ab29(X) :- inflight_wifi_service(X,'4'), on-board_service(X,'5'), departure_delay_in_minutes(X,N21), N21=<1.0. 
+ab30(X) :- id(X,'48820'). 
+ab31(X) :- baggage_handling(X,'4'), not ab30(X). 
+ab32(X) :- inflight_wifi_service(X,'4'), age(X,N3), N3>47.0, N3=<68.0, inflight_service(X,N19), N19>3.0, departure_delay_in_minutes(X,N21), N21=<1.0, not ab31(X). 
+ab33(X) :- id(X,'47264'). 
+ab34(X) :- id(X,'68334'). 
+ab35(X) :- inflight_wifi_service(X,'4'), gate_location(X,'5'), age(X,N3), N3=<41.0, not ab33(X), not ab34(X). 
+ab36(X) :- not type_of_travel(X,'business_travel'), class(X,'business'), not ab25(X), not ab26(X), not ab27(X), not ab28(X), not ab29(X), not ab32(X), not ab35(X). 
+ab37(X) :- not inflight_entertainment(X,'5'), flight_distance(X,N6), N6=<288.0. 
+ab38(X) :- inflight_wifi_service(X,'4'), not ease_of_online_bookin'g(X,'4'), not departure/arrival_time_convenient(X,'5'), not ab37(X). 
+ab39(X) :- on-board_service(X,'3'), departure_delay_in_minutes(X,N21), N21=<4.0. 
+ab40(X) :- departure/arrival_time_convenient(X,'5'), age(X,N3), N3=<38.0, flight_distance(X,N6), N6>628.0, N6=<1371.0, not ab39(X). 
+ab41(X) :- flight_distance(X,N6), N6=<223.0. 
+ab42(X) :- id(X,'54581'). 
+ab43(X) :- id(X,'68165'). 
+ab44(X) :- id(X,'8299'). 
+ab45(X) :- not customer_type(X,'loyal_customer'), not inflight_wifi_service(X,'5'), class(X,'business'), not on-board_service(X,'2'), age(X,N3), N3>24.0, not ab38(X), not ab27(X), not ab40(X), not ab41(X), not ab42(X), not ab43(X), not ab44(X). 
+ab46(X) :- id(X,'103662'). 
+ab47(X) :- id(X,'117049'). 
+ab48(X) :- id(X,'54583'). 
+ab49(X) :- id(X,'55991'). 
+ab50(X) :- id(X,'59552'). 
+ab51(X) :- id(X,'59776'). 
+ab52(X) :- id(X,'62100'). 
+ab53(X) :- seat_comfort(X,'4'), type_of_travel(X,'business_travel'), age(X,N3), N3>42.0, flight_distance(X,N6), N6>1190.0. 
+ab54(X) :- not class(X,'business'), not ab53(X). 
+ab55(X) :- id(X,'94265'). 
+ab56(X) :- ease_of_online_bookin'g(X,'1'), not ab55(X). 
+ab57(X) :- leg_room_service(X,'5'), not inflight_entertainment(X,'3'). 
+ab58(X) :- seat_comfort(X,'3'), flight_distance(X,N6), N6=<495.0, not ab56(X), not ab57(X). 
+ab59(X) :- id(X,'10058'). 
+ab60(X) :- not type_of_travel(X,'business_travel'), not ab59(X). 
+ab61(X) :- not customer_type(X,'loyal_customer'), flight_distance(X,N6), N6>707.0, N6=<862.0. 
+ab62(X) :- id(X,'81923'). 
+ab63(X) :- on-board_service(X,'5'), not ab58(X), not ab60(X), not ab61(X), not ab62(X). 
+ab64(X) :- id(X,'125630'). 
+ab65(X) :- id(X,'1690'). 
+ab66(X) :- on-board_service(X,'4'), not inflight_wifi_service(X,'4'), leg_room_service(X,'4'), not ab64(X), not ab65(X). 
+ab67(X) :- id(X,'76555'). 
+ab68(X) :- ease_of_online_bookin'g(X,'3'), age(X,N3), N3=<42.0, not ab67(X). 
+ab69(X) :- on-board_service(X,'1'). 
+ab70(X) :- baggage_handling(X,'3'), id(X,'81143'). 
+ab71(X) :- not customer_type(X,'loyal_customer'), not on-board_service(X,'5'), age(X,N3), N3>36.0, N3=<58.0, not ab68(X), not ab69(X), not ab70(X). 
+ab72(X) :- on-board_service(X,'4'), inflight_service(X,N19), N19>4.0. 
+ab73(X) :- online_boarding(X,'3'), age(X,N3), N3>32.0, not ab54(X), not ab63(X), not ab66(X), not ab71(X), not ab72(X), not ab27(X). 
+ab74(X) :- id(X,'100649'). 
+ab75(X) :- id(X,'65413'). 
+ab76(X) :- leg_room_service(X,'5'), not customer_type(X,'loyal_customer'), inflight_wifi_service(X,'3'), age(X,N3), N3>24.0, not ab74(X), not ab75(X). 
+ab77(X) :- seat_comfort(X,'3'). 
+ab78(X) :- id(X,'29437'). 
+ab79(X) :- food_and_drink(X,'4'), not ab77(X), not ab78(X). 
+ab80(X) :- not type_of_travel(X,'business_travel'). 
+ab81(X) :- not customer_type(X,'loyal_customer'). 
+ab82(X) :- id(X,'56121'). 
+ab83(X) :- on-board_service(X,'4'), inflight_entertainment(X,'5'), not departure/arrival_time_convenient(X,'5'), not ab80(X), not ab81(X), not ab82(X). 
+ab84(X) :- food_and_drink(X,'5'). 
+ab85(X) :- not on-board_service(X,'5'), inflight_entertainment(X,'5'), id(X,'105261'). 
+ab86(X) :- id(X,'1037'). 
+ab87(X) :- id(X,'12573'). 
+ab88(X) :- id(X,'23320'). 
+ab89(X) :- id(X,'42146'). 
+ab90(X) :- online_boarding(X,'5'), customer_type(X,'loyal_customer'), departure_delay_in_minutes(X,N21), N21>140.0. 
+ab91(X) :- inflight_wifi_service(X,'5'), not ab79(X), not ab83(X), not ab84(X), not ab85(X), not ab86(X), not ab87(X), not ab88(X), not ab89(X), not ab90(X). 
+ab92(X) :- food_and_drink(X,'4'), online_boarding(X,'3'), on-board_service(X,'4'), inflight_wifi_service(X,'1'), not leg_room_service(X,'1'). 
+% acc 0.9048 # rules 98
+% acc 0.9048 macro p r f1 0.9058 0.9048 0.9042 # rules 98
+% foldrm costs:  0:00:13.610716 
+
+
