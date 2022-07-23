@@ -1,0 +1,31 @@
+% water quality dataset 7999 21
+is_safe(X,'1') :- aluminium(X,N0), N0>0.21, cadmium(X,N4), N4=<0.009, perchlorate(X,N15), N15=<35.17, not ab8(X), not ab9(X), not ab12(X), not ab13(X), not ab14(X), not ab15(X), not ab17(X). 
+is_safe(X,'1') :- chloramine(X,N5), N5>0.64, perchlorate(X,N15), N15>10.81, radium(X,N16), N16=<4.88, silver(X,N18), N18=<0.1, uranium(X,N19), N19=<0.03, not ab19(X), not ab20(X), not ab22(X). 
+is_safe(X,'1') :- aluminium(X,N0), N0>0.82, ammonia(X,N1), N1=<7.28, cadmium(X,N4), N4=<0.009, viruses(X,N10), N10>0.5, nitrates(X,N12), N12=<10.1, not ab23(X). 
+is_safe(X,'1') :- aluminium(X,N0), N0>0.08, ammonia(X,N1), N1=<0.13, cadmium(X,N4), N4=<0.009, viruses(X,N10), N10>0.5. 
+is_safe(X,'1') :- aluminium(X,N0), N0>0.14, barium(X,N3), N3>2.31, chromium(X,N6), N6>0.19, N6=<0.2, viruses(X,N10), N10>0.5. 
+ab1(X) :- chromium(X,N6), N6=<0.36, selenium(X,N17), N17>0.04. 
+ab2(X) :- bacteria(X,N9), N9=<0.06, not ab1(X). 
+ab3(X) :- radium(X,N16), N16=<0.1. 
+ab4(X) :- barium(X,N3), N3>3.74, bacteria(X,N9), N9>0.62. 
+ab5(X) :- barium(X,N3), N3=<2.64, copper(X,N7), N7>1.73, bacteria(X,N9), N9>0.66. 
+ab6(X) :- chromium(X,N6), N6>0.49, copper(X,N7), N7=<1.44, lead(X,N11), N11>0.066, nitrites(X,N13), N13=<1.47. 
+ab7(X) :- aluminium(X,N0), N0>0.27, N0=<0.36, nitrates(X,N12), N12=<0.6. 
+ab8(X) :- aluminium(X,N0), N0=<0.4, not ab2(X), not ab3(X), not ab4(X), not ab5(X), not ab6(X), not ab7(X). 
+ab9(X) :- ammonia(X,N1), N1>17.58, nitrates(X,N12), N12>3.1, perchlorate(X,N15), N15>30.36. 
+ab10(X) :- ammonia(X,N1), N1>24.58. 
+ab11(X) :- aluminium(X,N0), N0=<0.6, not ab10(X). 
+ab12(X) :- ammonia(X,N1), N1>22.43, nitrates(X,N12), N12>8.83, perchlorate(X,N15), N15>21.54, not ab11(X). 
+ab13(X) :- arsenic(X,N2), N2>0.05. 
+ab14(X) :- ammonia(X,N1), N1>20.58, chromium(X,N6), N6=<0.15, perchlorate(X,N15), N15>18.03, radium(X,N16), N16>3.91. 
+ab15(X) :- aluminium(X,N0), N0>1.52, ammonia(X,N1), N1>28.71, perchlorate(X,N15), N15>23.72. 
+ab16(X) :- ammonia(X,N1), N1=<9.06. 
+ab17(X) :- barium(X,N3), N3>2.68, nitrates(X,N12), N12>15.62, perchlorate(X,N15), N15>23.58, not ab16(X). 
+ab18(X) :- chromium(X,N6), N6=<0.08, bacteria(X,N9), N9=<0.68. 
+ab19(X) :- selenium(X,N17), N17>0.08, not ab18(X). 
+ab20(X) :- perchlorate(X,N15), N15>54.13. 
+ab21(X) :- ammonia(X,N1), N1=<9.34. 
+ab22(X) :- aluminium(X,N0), N0>0.28, cadmium(X,N4), N4=<0.007, not ab21(X). 
+ab23(X) :- perchlorate(X,N15), N15>51.29. 
+% acc 0.96 p 0.9173 r 0.6971 f1 0.7922
+% foldr++ costs:  0:00:01.120566 
